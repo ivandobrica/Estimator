@@ -1,0 +1,16 @@
+//  ============================================================================
+//      #PAGE
+//  ============================================================================
+
+// Page-level styling (e.g. HTML and BODY elements).
+body {
+  -webkit-backface-visibility: hidden;
+  position: relative;
+}
+
+html {
+  font-size: $global-font-size;
+  line-height: $base-line-height;
+  background-color: $color-light;
+  color: $color-dark;
+}
