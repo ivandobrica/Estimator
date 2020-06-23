@@ -1,17 +1,15 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import Header from './header'
-import Home from '../../routes/home'
-import About from '../../routes/about'
+
+
+import Form from '../Form'
 
 function App() {
   return (
     <div>
       <Header />
-      <Route exact path="/" render={() => (
-          <Home />
-      )}/>
-      <Route path="/about" component={About} />
+      <Form />
     </div>
   );
 }
