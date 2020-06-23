@@ -1,11 +1,23 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-function Button() {
-  return (
-    <div className="btn">
-      button
-    </div>
-  );
+class Button extends Component {
+  constructor(props) {
+    super(props);
+}
+
+addEmptyItem() {
+  alert("Hello")
+}
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="btn" onClick={this.addEmptyItem.bind(this)}>
+          Add Task
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
 export default Button;

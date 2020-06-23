@@ -13,26 +13,31 @@ class Form extends Component {
   }
 
   handleInputChange(event) {
-    this.setState({value: event.target.value});
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
   }
 
   render() {
-    console.log(this.state.name);
     return (
       <React.Fragment>
         <form>
           <h4>Project title</h4>
           <input
-          name=""
-          value={this.state.name}
+          name="title"
+          value={this.state.title}
           onChange={this.handleInputChange}
           type="text"
           placeholder="Project Name"
           />
           <h4>Hourly rate</h4>
           <span>$</span><input
-          name=""
-          value={this.state.name}
+          name="price"
+          value={this.state.price}
           onChange={this.handleInputChange}
           type="number"
           />

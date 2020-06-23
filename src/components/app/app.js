@@ -4,12 +4,14 @@ import Header from './header'
 
 
 import Form from '../Form'
+import Button from '../Button'
 
 function App() {
   return (
     <div>
       <Header />
       <Form />
+      <Button />
     </div>
   );
 }
