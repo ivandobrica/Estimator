@@ -11,7 +11,6 @@ function App() {
       <h1>Estimator</h1>
       <Form />
       <TableList />
-      <Button />
     </div>
   );
 }

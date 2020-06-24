@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import TableListItem from '../TableListItem'
+import Button from '../Button'
 
 class tableList extends Component {
   constructor(props) {
@@ -8,28 +9,26 @@ class tableList extends Component {
 
     this.state = {
       newItems: [{
-        name:"nesto",
+        name:"Project Setup",
         id: 1
       },
       {
-        name:"nestsfsfo",
+        name:"Slider (5 slider)",
         id: 2
       }]
     }
   }
 
+  addNewItem() {
+    console.log("hello")
+  }
+/*
   addEmptyItem(newItem) {
     this.setState(prevState => ({
       newItems: [...prevState.newItems, newItem]
     }));
   };
-
-  onChange(e) {
-    const key = e.target.name;
-    const value = e.target.value;
-
-    this.setState({ [key]: value });
-}
+*/
 
   render() {
     return (
@@ -38,11 +37,12 @@ class tableList extends Component {
           {this.state.newItems.map((newItem, i) => (
             <li key={i}>
               <TableListItem
-              name={this.state.newItems[0].name}
+              name={this.state.newItems[i].name}
               />
             </li>
           ))}
         </ul>
+        <Button clicked={this.addNewItem}/>
       </React.Fragment>
     )
   }

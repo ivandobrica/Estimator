@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import Button from '../Button'
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +24,10 @@ class Form extends Component {
     });
   }
 
+  makePdf(){
+    console.log("hello")
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -41,6 +47,7 @@ class Form extends Component {
           onChange={this.handleInputChange}
           type="number"
           />
+        <Button clicked={this.makePdf}/>
         </form>
       </React.Fragment>
     )
