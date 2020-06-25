@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import Button from '../Button'
+import TableList from '../TableList'
 
 class Form extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class Form extends Component {
   }
 
   makePdf(){
-    console.log("hello")
+    console.log("pdf")
   }
 
   render() {
@@ -47,6 +48,7 @@ class Form extends Component {
           onChange={this.handleInputChange}
           type="number"
           />
+        <TableList />
         <Button clicked={this.makePdf}/>
         </form>
       </React.Fragment>

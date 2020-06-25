@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class Button extends Component {
+class DeleteListItem extends Component {
 
   onClick() {
     let clickedProp = this.props.clicked;
@@ -19,4 +19,4 @@ class Button extends Component {
     );
   }
 }
-export default Button;
+export default DeleteListItem;

@@ -3,32 +3,24 @@ import React, {Component} from 'react'
 import TableListItem from '../TableListItem'
 import Button from '../Button'
 
+
 class tableList extends Component {
   constructor(props) {
   super(props)
 
     this.state = {
       newItems: [{
-        name:"Project Setup",
-        id: 1
+        name:"Project Setup"
       },
       {
-        name:"Slider (5 slider)",
-        id: 2
+        name:"Slider (5 slider)"
       }]
     }
   }
 
   addNewItem() {
-    console.log("hello")
-  }
-/*
-  addEmptyItem(newItem) {
-    this.setState(prevState => ({
-      newItems: [...prevState.newItems, newItem]
-    }));
+
   };
-*/
 
   render() {
     return (
