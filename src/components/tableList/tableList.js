@@ -1,26 +1,29 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import TableListItem from '../TableListItem'
 import Button from '../Button'
 
-
-class tableList extends Component {
+class TableList extends Component {
   constructor(props) {
   super(props)
-
     this.state = {
-      newItems: [{
-        name:"Project Setup"
-      },
-      {
-        name:"Slider (5 slider)"
-      }]
+      newItems: [],
+      currentItem:{
+        key:'',
+      }
     }
+    this.addNewItem = this.addNewItem.bind(this);
   }
 
   addNewItem() {
+    const newItem = this.state.currentItem;
 
-  };
+    const newItems=[...this.state.newItems, newItem];
+
+    this.setState({
+      newItems: newItems
+    })
+  }
 
   render() {
     return (
@@ -40,4 +43,4 @@ class tableList extends Component {
   }
 }
 
-export default tableList;
+export default TableList;
