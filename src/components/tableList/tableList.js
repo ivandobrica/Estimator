@@ -15,6 +15,20 @@ class TableList extends Component {
     this.addNewItem = this.addNewItem.bind(this);
   }
 
+/* poslozi da uzima [i] ili da od buttona do ovdje vuce key
+
+  deleteItem() {
+    console.log("deleted")
+    const filteredItems = this.state.newItems.filter(item => {
+      return item.key !== key;
+    })
+
+    this.setState({
+      newItems: filteredItems
+    })
+  }
+*/
+
   addNewItem() {
     const newItem = this.state.currentItem;
 
@@ -26,6 +40,7 @@ class TableList extends Component {
   }
 
   render() {
+    console.log(this.state.newItems)
     return (
       <React.Fragment>
         <ul>
@@ -33,6 +48,7 @@ class TableList extends Component {
             <li key={i}>
               <TableListItem
               name={this.state.newItems[i].name}
+              deleteListItem={this.deleteItem.bind(this)}
               />
             </li>
           ))}
