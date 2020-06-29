@@ -49,6 +49,7 @@ class Form extends Component {
           type="number"
           />
         <TableList />
+        <h4>Total</h4>
         <Button clicked={this.makePdf}/>
         </form>
       </React.Fragment>

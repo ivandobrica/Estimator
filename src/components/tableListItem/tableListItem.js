@@ -12,6 +12,7 @@ class TableListItem extends Component {
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   handleInputChange(event) {

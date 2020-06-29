@@ -9,25 +9,27 @@ class TableList extends Component {
     this.state = {
       newItems: [],
       currentItem:{
-        key:'',
+        id:''
       }
     }
     this.addNewItem = this.addNewItem.bind(this);
   }
 
-/* poslozi da uzima [i] ili da od buttona do ovdje vuce key
 
-  deleteItem() {
-    console.log("deleted")
-    const filteredItems = this.state.newItems.filter(item => {
-      return item.key !== key;
-    })
-
-    this.setState({
-      newItems: filteredItems
+  deleteItem(index){
+    const list = this.state.newItems;
+    for( let i = 0; i < list.length; i++ ){
+      console.log('index', index)
+      console.log('list', list[i])
+      if ( i === index ) {
+        list.splice(index, 1)
+      }
+    }
+      this.setState({
+      newItems: list
     })
   }
-*/
+
 
   addNewItem() {
     const newItem = this.state.currentItem;
@@ -48,7 +50,7 @@ class TableList extends Component {
             <li key={i}>
               <TableListItem
               name={this.state.newItems[i].name}
-              deleteListItem={this.deleteItem.bind(this)}
+              deleteListItem={this.deleteItem.bind(this, i)}
               />
             </li>
           ))}
