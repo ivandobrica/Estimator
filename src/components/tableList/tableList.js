@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import TableListItem from '../TableListItem'
 import Button from '../Button'
+import { v4 as uuidv4 } from 'uuid';
 
 class TableList extends Component {
   constructor(props) {
@@ -13,9 +14,10 @@ class TableList extends Component {
       }
     }
     this.addNewItem = this.addNewItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
-
+/*
   deleteItem(index){
     const list = this.state.newItems;
     for( let i = 0; i < list.length; i++ ){
@@ -29,28 +31,35 @@ class TableList extends Component {
       newItems: list
     })
   }
+  */
+
+deleteItem(id){
+  const newItems = this.state.newItems.filter(i => i.id !== id)
+    this.setState({
+    newItems: newItems
+  })
+}
+
 
 
   addNewItem() {
     const newItem = this.state.currentItem;
 
-    const newItems=[...this.state.newItems, newItem];
-
+    const newItems=[...this.state.newItems, { id: uuidv4() }];
     this.setState({
       newItems: newItems
     })
   }
 
   render() {
-    console.log(this.state.newItems)
     return (
       <React.Fragment>
         <ul>
           {this.state.newItems.map((newItem, i) => (
             <li key={i}>
               <TableListItem
-              name={this.state.newItems[i].name}
-              deleteListItem={this.deleteItem.bind(this, i)}
+              id={this.state.newItems[i].id}
+              deleteListItem={(id) => this.deleteItem(id)}
               />
             </li>
           ))}

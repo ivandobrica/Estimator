@@ -9,10 +9,17 @@ class TableListItem extends Component {
     this.state = {
       title: '',
       price: '',
+      id: ''
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+  }
+
+  componentDidMount(){
+    this.setState({
+      id: this.props.id
+    })
   }
 
   handleInputChange(event) {
@@ -25,11 +32,12 @@ class TableListItem extends Component {
     });
   }
 
-  deleteItem() {
-    this.props.deleteListItem()
+  deleteItem(id) {
+    this.props.deleteListItem(id)
   }
 
   render() {
+
     return (
       <React.Fragment>
         <input
