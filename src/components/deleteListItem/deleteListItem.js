@@ -14,6 +14,7 @@ class DeleteListItem extends Component {
     return (
       <React.Fragment>
         <div className="btn" onClick={this.onClick.bind(this)}>
+          X
         </div>
       </React.Fragment>
     );

@@ -10,36 +10,20 @@ class TableList extends Component {
     this.state = {
       newItems: [],
       currentItem:{
-        id:''
+        id: ''
       }
     }
     this.addNewItem = this.addNewItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
   }
 
-/*
-  deleteItem(index){
-    const list = this.state.newItems;
-    for( let i = 0; i < list.length; i++ ){
-      console.log('index', index)
-      console.log('list', list[i])
-      if ( i === index ) {
-        list.splice(index, 1)
-      }
-    }
-      this.setState({
-      newItems: list
-    })
-  }
-  */
 
 deleteItem(id){
-  const newItems = this.state.newItems.filter(i => i.id !== id)
+  const newItems = this.state.newItems.filter(newItem => newItem.id !== id)
     this.setState({
     newItems: newItems
   })
 }
-
 
 
   addNewItem() {
@@ -52,13 +36,14 @@ deleteItem(id){
   }
 
   render() {
+    console.log(this.state.newItems)
     return (
       <React.Fragment>
         <ul>
           {this.state.newItems.map((newItem, i) => (
             <li key={i}>
               <TableListItem
-              id={this.state.newItems[i].id}
+              id={newItem.id}
               deleteListItem={(id) => this.deleteItem(id)}
               />
             </li>

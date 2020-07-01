@@ -8,18 +8,11 @@ class TableListItem extends Component {
 
     this.state = {
       title: '',
-      price: '',
-      id: ''
+      price: ''
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.deleteItem = this.deleteItem.bind(this);
-  }
-
-  componentDidMount(){
-    this.setState({
-      id: this.props.id
-    })
+    this.onDeleteItem = this.onDeleteItem.bind(this);
   }
 
   handleInputChange(event) {
@@ -32,12 +25,11 @@ class TableListItem extends Component {
     });
   }
 
-  deleteItem(id) {
-    this.props.deleteListItem(id)
+  onDeleteItem(id) {
+    this.props.deleteListItem(this.props.id)
   }
 
   render() {
-
     return (
       <React.Fragment>
         <input
@@ -59,7 +51,7 @@ class TableListItem extends Component {
         type="number"
         />
       <label>=</label>
-      <DeleteListItem clicked={this.deleteItem}/>
+      <DeleteListItem clicked={this.onDeleteItem}/>
       </React.Fragment>
     )
   }
