@@ -9,7 +9,7 @@ class TableList extends Component {
   super(props)
     this.state = {
       newItems: [],
-      currentItem:{
+      currentItem: {
         id: ''
       }
     }
@@ -20,6 +20,7 @@ class TableList extends Component {
 
 deleteItem(id){
   const newItems = this.state.newItems.filter(newItem => newItem.id !== id)
+
     this.setState({
     newItems: newItems
   })
@@ -49,7 +50,7 @@ deleteItem(id){
             </li>
           ))}
         </ul>
-        <Button clicked={this.addNewItem}/>
+        <Button name="Add Task" clicked={this.addNewItem}/>
       </React.Fragment>
     )
   }

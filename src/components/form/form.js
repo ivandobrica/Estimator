@@ -9,7 +9,7 @@ class Form extends Component {
 
     this.state = {
       title: '',
-      price: '',
+      price: ''
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -50,7 +50,7 @@ class Form extends Component {
           />
         <TableList />
         <h4>Total</h4>
-        <Button clicked={this.makePdf}/>
+        <Button name="Export to PDF"  description="Powered by Northwest Agency" clicked={this.makePdf}/>
         </form>
       </React.Fragment>
     )

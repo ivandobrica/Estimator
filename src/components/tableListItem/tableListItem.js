@@ -8,7 +8,8 @@ class TableListItem extends Component {
 
     this.state = {
       title: '',
-      price: ''
+      hours: '',
+      rate: ''
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -38,19 +39,20 @@ class TableListItem extends Component {
         placeholder="Task name"
         />
         <input
-        name="price"
-        value={this.state.price}
+        name="hours"
+        value={this.state.hours}
         onChange={this.handleInputChange}
         type="number"
         />
         <label>&times;</label>
         <span>$</span><input
-        name="price"
-        value={this.state.price}
+        name="rate"
+        value={this.state.rate}
         onChange={this.handleInputChange}
         type="number"
         />
       <label>=</label>
+
       <DeleteListItem clicked={this.onDeleteItem}/>
       </React.Fragment>
     )
