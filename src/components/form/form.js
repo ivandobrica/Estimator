@@ -30,6 +30,7 @@ class Form extends Component {
   }
 
   render() {
+
     return (
       <React.Fragment>
         <form>
@@ -50,6 +51,7 @@ class Form extends Component {
           />
         <TableList />
         <h4>Total</h4>
+
         <Button name="Export to PDF"  description="Powered by Northwest Agency" clicked={this.makePdf}/>
         </form>
       </React.Fragment>

@@ -31,9 +31,9 @@ class TableListItem extends Component {
   }
 
   render() {
+    const total = this.state.hours * this.state.rate;
     return (
       <React.Fragment>
-        <h5>{this.props.id}</h5>
         <input
         name="title"
         type="text"
@@ -53,7 +53,7 @@ class TableListItem extends Component {
         type="number"
         />
       <label>=</label>
-
+      <label>{total}</label>
       <DeleteListItem clicked={this.onDeleteItem}/>
       </React.Fragment>
     )
