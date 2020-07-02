@@ -17,7 +17,6 @@ class TableList extends Component {
     this.deleteItem = this.deleteItem.bind(this);
   }
 
-
 deleteItem(id){
   const newItems = this.state.newItems.filter(newItem => newItem.id !== id)
 
@@ -25,7 +24,6 @@ deleteItem(id){
     newItems: newItems
   })
 }
-
 
   addNewItem() {
     const newItem = this.state.currentItem;
@@ -37,12 +35,11 @@ deleteItem(id){
   }
 
   render() {
-    console.log(this.state.newItems)
     return (
       <React.Fragment>
         <ul>
           {this.state.newItems.map((newItem, i) => (
-            <li key={i}>
+            <li key={newItem.id}>
               <TableListItem
               id={newItem.id}
               deleteListItem={(id) => this.deleteItem(id)}

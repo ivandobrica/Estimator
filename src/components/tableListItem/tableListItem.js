@@ -23,7 +23,7 @@ class TableListItem extends Component {
 
     this.setState({
       [name]: value
-    });
+    })
   }
 
   onDeleteItem(id) {
@@ -33,6 +33,7 @@ class TableListItem extends Component {
   render() {
     return (
       <React.Fragment>
+        <h5>{this.props.id}</h5>
         <input
         name="title"
         type="text"
