@@ -10,29 +10,41 @@ class TableList extends Component {
     this.state = {
       newItems: [],
       currentItem: {
-        id: ''
+        id: '',
+        sve: ''
       }
     }
     this.addNewItem = this.addNewItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+    this.getData = this.getData.bind(this);
   }
 
-deleteItem(id){
-  const newItems = this.state.newItems.filter(newItem => newItem.id !== id)
-
-    this.setState({
-    newItems: newItems
-  })
-}
+  deleteItem(id){
+    const newItems = this.state.newItems.filter(newItem => newItem.id !== id)
+      this.setState({
+      newItems: newItems
+    })
+  }
 
   addNewItem() {
     const newItem = this.state.currentItem;
-
     const newItems=[...this.state.newItems, { id: uuidv4() }];
     this.setState({
       newItems: newItems
     })
   }
+
+  getData(total) {
+
+    this.setState({
+      sve: total
+    })
+  }
+
+    componentDidUpdate(prevProps, prevState) {
+      if (prevState.sve !== this.state.sve) {
+      }
+    }
 
   render() {
     return (
@@ -43,11 +55,13 @@ deleteItem(id){
               <TableListItem
               id={newItem.id}
               deleteListItem={(id) => this.deleteItem(id)}
+              racunaj={this.getData}
               />
             </li>
           ))}
         </ul>
         <Button name="Add Task" clicked={this.addNewItem}/>
+        <h1>{this.state.sve}</h1>
       </React.Fragment>
     )
   }
