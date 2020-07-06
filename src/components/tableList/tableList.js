@@ -10,19 +10,21 @@ class TableList extends Component {
     this.state = {
       newItems: [],
       currentItem: {
-        id: '',
-        sve: ''
-      }
+        id: ''
+      },
+      ivan: 0
     }
     this.addNewItem = this.addNewItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     this.getData = this.getData.bind(this);
   }
 
-  deleteItem(id){
+  deleteItem(id, total){
+    var finalTotal = this.state.ivan - total
     const newItems = this.state.newItems.filter(newItem => newItem.id !== id)
       this.setState({
-      newItems: newItems
+      newItems: newItems,
+      ivan: finalTotal
     })
   }
 
@@ -35,16 +37,10 @@ class TableList extends Component {
   }
 
   getData(total) {
-    this.setState({
-      sve: total
-    })
+    this.setState(prevState => ({
+      ivan: prevState.ivan + total
+    }))
   }
-
-    componentDidUpdate(prevProps, prevState) {
-      if (prevState.sve !== this.state.sve) {
-        
-      }
-    }
 
   render() {
     return (
@@ -54,14 +50,14 @@ class TableList extends Component {
             <li key={newItem.id}>
               <TableListItem
               id={newItem.id}
-              deleteListItem={(id) => this.deleteItem(id)}
+              deleteListItem={(id, total) => this.deleteItem(id, total)}
               racunaj={this.getData}
               />
             </li>
           ))}
         </ul>
-        <Button name="Add Task" clicked={this.addNewItem}/>
-        <h1>{this.state.sve}</h1>
+        <Button name="Add Task" clicked={this.addNewItem} />
+        <h2>{this.state.ivan}</h2>
       </React.Fragment>
     )
   }

@@ -40,8 +40,8 @@ class TableListItem extends Component {
     })
   }
 
-  onDeleteItem(id) {
-    this.props.deleteListItem(this.props.id)
+  onDeleteItem() {
+    this.props.deleteListItem(this.props.id, this.state.total)
   }
 
   render() {
@@ -68,7 +68,7 @@ class TableListItem extends Component {
         />
       <label>=</label>
       <label>{this.state.total}</label>
-      <DeleteListItem clicked={this.onDeleteItem}/>
+      <DeleteListItem clicked={this.onDeleteItem} />
       </React.Fragment>
     )
   }
