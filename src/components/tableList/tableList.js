@@ -35,7 +35,6 @@ class TableList extends Component {
   }
 
   getData(total) {
-
     this.setState({
       sve: total
     })
@@ -43,6 +42,7 @@ class TableList extends Component {
 
     componentDidUpdate(prevProps, prevState) {
       if (prevState.sve !== this.state.sve) {
+        
       }
     }
 

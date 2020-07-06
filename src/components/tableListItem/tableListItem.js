@@ -23,14 +23,12 @@ class TableListItem extends Component {
     this.setState({
       total: total
     })
-    this.ovoJeFun()
+    this.ovoJeFun(total)
     }
   }
 
-  ovoJeFun(){
-    this.props.racunaj(
-      this.state.total
-    )
+  ovoJeFun(total){
+    this.props.racunaj(total)
   }
 
   handleInputChange(event) {
