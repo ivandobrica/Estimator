@@ -1,0 +1,73 @@
+
+.form {
+  width: 1200px;
+  border-radius: 50px 50px 0px 0px;
+  background-color: $color-light;
+  padding: 101px 75px 0 75px;
+
+  .upperPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 73px;
+  }
+
+  .firstPart {
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-second-text;
+    }
+
+    input {
+      border: none;
+      text-decoration: underline;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      color: $color-main-text;
+    }
+  }
+
+  .secondPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-second-text;
+    }
+
+    .priceInput {
+      margin-left: 30px;
+    }
+
+    input {
+      border: none;
+      width: 85px;
+      height: 52px;
+      border-radius: 50px;
+      border: solid 1px $color-border;
+      background-color: $color-background;
+      text-align: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+    color: $color-second-text;
+  }
+
+  .below {
+
+  }
+
+}

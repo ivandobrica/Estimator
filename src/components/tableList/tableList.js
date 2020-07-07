@@ -57,7 +57,7 @@ class TableList extends Component {
           ))}
         </ul>
         <Button name="Add Task" clicked={this.addNewItem} />
-        <h2>{this.state.ivan}</h2>
+        <h2>${this.state.ivan}</h2>
       </React.Fragment>
     )
   }

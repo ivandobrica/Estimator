@@ -1,0 +1,44 @@
+
+.inputLi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .titlePart {
+
+
+    .inputTitleItem {
+      width: 110px;
+      height: 18px;
+      font-size: 18px;
+      font-weight: bold;
+      color: $color-main-text;
+      border: none;
+    }
+  }
+
+  .numberPart {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .inputNumberItem {
+      color: $color-main-text;
+      border: none;
+      width: 85px;
+      height: 52px;
+      border-radius: 50px;
+      border: solid 1px $color-border;
+      background-color: $color-light;
+      text-align: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+}

@@ -30,25 +30,34 @@ class Form extends Component {
   render() {
     return (
       <React.Fragment>
-        <form>
-          <h4>Project title</h4>
-          <input
-          name="title"
-          value={this.state.title}
-          onChange={this.handleInputChange}
-          type="text"
-          placeholder="Project Name"
-          />
-          <h4>Hourly rate</h4>
-          <span>$</span><input
-          name="price"
-          value={this.state.price}
-          onChange={this.handleInputChange}
-          type="number"
-          />
-        <TableList />
-        <h4>Total</h4>
-        <Button name="Export to PDF"  description="Powered by Northwest Agency" clicked={this.makePdf}/>
+        <form className="form">
+          <div className="upperPart">
+            <div className="firstPart">
+              <h4>Project title</h4>
+              <input
+              name="title"
+              value={this.state.title}
+              onChange={this.handleInputChange}
+              type="text"
+              placeholder="Give me a name.."
+              />
+            </div>
+            <div className="secondPart">
+              <h4>Hourly rate</h4>
+              <div className="priceInput">
+                <span>$</span>
+                <input
+                name="price"
+                value={this.state.price}
+                onChange={this.handleInputChange}
+                type="number"
+                />
+              </div>
+            </div>
+          </div>
+          <TableList />
+          <h4>Total</h4>
+          <Button name="Export to PDF"  description="Powered by Northwest Agency" clicked={this.makePdf}/>
         </form>
       </React.Fragment>
     )

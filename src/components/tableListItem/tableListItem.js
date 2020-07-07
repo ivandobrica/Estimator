@@ -10,7 +10,7 @@ class TableListItem extends Component {
       title: '',
       hours: '',
       rate: '',
-      total: ''
+      total: 0
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -47,28 +47,37 @@ class TableListItem extends Component {
   render() {
     return (
       <React.Fragment>
-        <input
-        name="title"
-        type="text"
-        placeholder="Task name"
-        />
-        <input
-        name="hours"
-        value={this.state.hours}
-        onChange={this.handleInputChange}
-        type="number"
-        />
-        <label>&times;</label>
-        <span>$</span>
-        <input
-        name="rate"
-        value={this.state.rate}
-        onChange={this.handleInputChange}
-        type="number"
-        />
-      <label>=</label>
-      <label>{this.state.total}</label>
-      <DeleteListItem clicked={this.onDeleteItem} />
+        <div className="inputLi">
+          <div className="titlePart">
+            <input
+            className="inputTitleItem"
+            name="title"
+            type="text"
+            placeholder="Task name"
+            />
+          </div>
+          <div className="numberPart">
+            <input
+            className="inputNumberItem"
+            name="hours"
+            value={this.state.hours}
+            onChange={this.handleInputChange}
+            type="number"
+            />
+            <label>&times;</label>
+            <span>$</span>
+            <input
+            className="inputNumberItem"
+            name="rate"
+            value={this.state.rate}
+            onChange={this.handleInputChange}
+            type="number"
+            />
+            <label>=</label>
+            <label>${this.state.total}</label>
+            <DeleteListItem clicked={this.onDeleteItem} />
+          </div>
+        </div>
       </React.Fragment>
     )
   }
