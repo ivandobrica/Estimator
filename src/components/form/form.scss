@@ -66,8 +66,16 @@
     color: $color-second-text;
   }
 
-  .below {
+  .pdfBtn {
+    width: 439px;
+    height: 106px;
+    border-radius: 0;
+    background-color: $color-btn-background;
+    align-items: center;
+    flex-direction: column;
 
+    p{
+      font-weight: normal;
+    }
   }
-
 }

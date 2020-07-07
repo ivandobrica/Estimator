@@ -57,7 +57,7 @@ class Form extends Component {
           </div>
           <TableList />
           <h4>Total</h4>
-          <Button name="Export to PDF"  description="Powered by Northwest Agency" clicked={this.makePdf}/>
+          <Button className="pdfBtn" name="Export to PDF"  description="Powered by Northwest Agency" clicked={this.makePdf}/>
         </form>
       </React.Fragment>
     )

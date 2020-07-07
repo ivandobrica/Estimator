@@ -13,12 +13,12 @@ class Button extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="btn" onClick={this.onClick.bind(this)}>
+        <div className={this.props.className ? `btn ${this.props.className}` : 'btn'} onClick={this.onClick.bind(this)}>
             {this.props.name}
             <p>{this.props.description}</p>
         </div>
       </React.Fragment>
-    );
+    )
   }
 }
 export default Button;
