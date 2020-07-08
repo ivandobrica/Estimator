@@ -14,8 +14,10 @@ class Button extends Component {
     return (
       <React.Fragment>
         <div className={this.props.className ? `btn ${this.props.className}` : 'btn'} onClick={this.onClick.bind(this)}>
+          <div>
             {this.props.name}
             <p>{this.props.description}</p>
+          </div>
         </div>
       </React.Fragment>
     )

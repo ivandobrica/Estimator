@@ -1,11 +1,11 @@
 
 .form {
   width: 1200px;
-  height: 100vh;
   margin-top: 160px;
   border-radius: 50px 50px 0px 0px;
   background-color: $color-light;
   padding: 101px 75px 0 75px;
+  position: relative;
 
   .upperPart {
     display: flex;
@@ -75,15 +75,28 @@
   }
 
   .pdfBtn {
+    position: relative;
     width: 439px;
     height: 106px;
+    font-size: 14px;
     border-radius: 0;
     background-color: $color-btn-background;
     align-items: center;
     flex-direction: column;
 
+    ::after {
+      content: "";
+      width: 1px;
+      height: 106px;
+      position: absolute;
+      top: 0;
+      right: 104px;
+      background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+
     p{
       font-weight: normal;
+      font-size: 11px;
     }
   }
 }

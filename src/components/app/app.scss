@@ -1,7 +1,6 @@
 
 .app {
-  height: 100vh;
-  background-image: linear-gradient(to bottom, $color-background 68%, $color-background);
+  background-image: linear-gradient(to bottom, $color-background 100%, $color-background);
   display: flex;
   justify-content: center;
   align-items: center;
