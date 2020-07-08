@@ -1,0 +1,12 @@
+li {
+  background-color: $color-background;
+  list-style-type: none;
+}
+
+li:nth-child(even) {
+  background-color: $color-light;
+}
+
+.addBtn {
+  margin-top: 52px;
+}

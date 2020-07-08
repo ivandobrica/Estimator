@@ -48,14 +48,12 @@ class TableListItem extends Component {
     return (
       <React.Fragment>
         <div className="inputLi">
-          <div className="titlePart">
-            <input
-            className="inputTitleItem"
-            name="title"
-            type="text"
-            placeholder="Task name"
-            />
-          </div>
+          <input
+          className="inputTitleItem"
+          name="title"
+          type="text"
+          placeholder="Task name"
+          />
           <div className="numberPart">
             <input
             className="inputNumberItem"
@@ -75,7 +73,7 @@ class TableListItem extends Component {
             />
             <label>=</label>
             <label>${this.state.total}</label>
-            <DeleteListItem clicked={this.onDeleteItem} />
+            <DeleteListItem className="trashBin" clicked={this.onDeleteItem} />
           </div>
         </div>
       </React.Fragment>
