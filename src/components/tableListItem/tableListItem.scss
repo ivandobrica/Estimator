@@ -10,7 +10,6 @@
     font-weight: bold;
     color: $color-main-text;
     border: none;
-    background-color: $color-background;
     margin-left: 92px;
   }
 
@@ -19,10 +18,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    > * {
-
-    }
 
     .inputNumberItem {
       color: $color-main-text;
@@ -40,10 +35,6 @@
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
-    }
-
-    .trashBin {
-      margin-right: 92px;
     }
   }
 

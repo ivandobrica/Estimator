@@ -73,7 +73,7 @@ class TableListItem extends Component {
             />
             <label>=</label>
             <label>${this.state.total}</label>
-            <DeleteListItem className="trashBin" clicked={this.onDeleteItem} />
+            <DeleteListItem className="" clicked={this.onDeleteItem} />
           </div>
         </div>
       </React.Fragment>

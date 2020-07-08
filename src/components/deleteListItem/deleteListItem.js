@@ -13,7 +13,7 @@ class DeleteListItem extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="btn" onClick={this.onClick.bind(this)}>
+        <div className="trashBin" onClick={this.onClick.bind(this)}>
           X
         </div>
       </React.Fragment>

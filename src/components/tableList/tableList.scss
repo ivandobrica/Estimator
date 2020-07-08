@@ -7,6 +7,10 @@ li:nth-child(even) {
   background-color: $color-light;
 }
 
+li:nth-child(odd) .inputTitleItem {
+  background-color: $color-background;
+}
+
 .addBtn {
   margin-top: 52px;
 }
