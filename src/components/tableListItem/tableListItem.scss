@@ -5,6 +5,7 @@
   align-items: center;
 
   .inputTitleItem {
+    width: 400px;
     height: 18px;
     font-size: 18px;
     font-weight: bold;
@@ -35,6 +36,11 @@
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+
+    .result {
+      font-size: 24px;
+      font-weight: bold;
     }
   }
 

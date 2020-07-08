@@ -45,7 +45,6 @@ class Form extends Component {
             <div className="secondPart">
               <h4>Hourly rate</h4>
               <div className="priceInput">
-                <span>$</span>
                 <input
                 name="price"
                 value={this.state.price}

@@ -63,7 +63,6 @@ class TableListItem extends Component {
             type="number"
             />
             <label>&times;</label>
-            <span>$</span>
             <input
             className="inputNumberItem"
             name="rate"
@@ -72,7 +71,7 @@ class TableListItem extends Component {
             type="number"
             />
             <label>=</label>
-            <label>${this.state.total}</label>
+            <label className="result">${this.state.total}</label>
             <DeleteListItem className="" clicked={this.onDeleteItem} />
           </div>
         </div>
