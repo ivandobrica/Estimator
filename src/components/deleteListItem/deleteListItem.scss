@@ -1,13 +1,15 @@
 
 .trashBin {
   margin-right: 92px;
-  color: $color-btn;
-  background-color: $color-btn-background;
+  color: $color-second-text;
   font-weight: bold;
-  width: 173px;
-  height: 52px;
-  border-radius: 50px;
+  width: 17px;
+  height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  svg:hover {
+    fill: $color-btn-background;
+  }
 }

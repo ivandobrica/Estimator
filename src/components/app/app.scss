@@ -7,14 +7,56 @@
   font-family: $font-style;
   color: $color-main-text;
   box-sizing: border-box;
+  min-height: 100vh;
 
   h1 {
     position: absolute;
-    top: 2%;
-    left: 2%;
+    top: 24px;
+    left: 106px;
     font-size: 24px;
     font-weight: bold;
     line-height: 1;
     letter-spacing: 1.14px;
+    padding: 10px;
+  }
+
+  .svgIcon {
+
+    svg {
+      width: 17px;
+      height: 13px;
+      background-color: red;
+      border: 1px solid white;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .plus {
+      top: 28px;
+      left: 49px;
+    }
+
+    .puta {
+      top: 34px;
+      left: 69px;
+    }
+
+    .minus {
+      top: 57px;
+      left: 48px;
+    }
+
+    .kroz {
+      top: 46px;
+      left: 77px;
+    }
+
+    .jednako {
+      top: 44px;
+      left: 58px;
+      width: 17px;
+      height: 21px;
+    }
   }
 }

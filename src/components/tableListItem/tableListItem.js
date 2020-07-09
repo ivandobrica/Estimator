@@ -63,13 +63,16 @@ class TableListItem extends Component {
             type="number"
             />
             <label>&times;</label>
-            <input
-            className="inputNumberItem"
-            name="rate"
-            value={this.state.rate}
-            onChange={this.handleInputChange}
-            type="number"
-            />
+            <div className="test">
+              <i>$</i>
+              <input
+              className="inputNumberItem"
+              name="rate"
+              value={this.state.rate}
+              onChange={this.handleInputChange}
+              type="number"
+              />
+            </div>
             <label>=</label>
             <label className="result">${this.state.total}</label>
             <DeleteListItem className="" clicked={this.onDeleteItem} />

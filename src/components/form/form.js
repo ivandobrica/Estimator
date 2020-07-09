@@ -45,6 +45,7 @@ class Form extends Component {
             <div className="secondPart">
               <h4>Hourly rate</h4>
               <div className="priceInput">
+                <i>$</i>
                 <input
                 name="price"
                 value={this.state.price}
@@ -57,7 +58,7 @@ class Form extends Component {
           <TableList />
           <h4>Total</h4>
           <Button className="pdfBtn" name="Export to PDF"  description="Powered by Northwest Agency" clicked={this.makePdf}/>
-        </form>
+          </form>
       </React.Fragment>
     )
   }

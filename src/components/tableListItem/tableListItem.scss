@@ -4,6 +4,11 @@
   justify-content: space-between;
   align-items: center;
 
+  label {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
   .inputTitleItem {
     width: 400px;
     height: 18px;
@@ -31,6 +36,19 @@
       text-align: center;
       margin: 25px 0;
     }
+
+    .test {
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 38px;
+        left:15px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
