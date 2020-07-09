@@ -45,6 +45,16 @@ class TableList extends Component {
   render() {
     return (
       <React.Fragment>
+        <div className="listTitle">
+          <div>
+            <h4>Task name</h4>
+          </div>
+          <div className="listTitleSecond">
+            <h4>Hours</h4>
+            <h4>Rate</h4>
+            <span><h4>Est. price</h4></span>
+          </div>
+        </div>
         <ul>
           {this.state.newItems.map((newItem, i) => (
             <li key={newItem.id}>
@@ -56,8 +66,13 @@ class TableList extends Component {
             </li>
           ))}
         </ul>
-        <Button className="addBtn" name="Add Task" clicked={this.addNewItem} />
-        <h2>${this.state.ivan}</h2>
+        <div className="finalResult">
+          <Button className="addBtn" name="Add Task" clicked={this.addNewItem} />
+          <div className="rightSideResult">
+            <h4>Total</h4>
+            <h2>${this.state.ivan}</h2>
+          </div>
+        </div>
       </React.Fragment>
     )
   }

@@ -20,7 +20,7 @@
   }
 
   .numberPart {
-    width: 60%;
+    width: 620px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +35,8 @@
       background-color: $color-light;
       text-align: center;
       margin: 25px 0;
+      font-weight: bold;
+      font-size: 18px;
     }
 
     .test {
@@ -43,7 +45,7 @@
       i {
         position: absolute;
         top: 38px;
-        left:15px;
+        left:12px;
         font-weight: bold;
         font-size: 18px;
       }

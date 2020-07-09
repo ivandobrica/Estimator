@@ -1,3 +1,25 @@
+.listTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 92px;
+  margin-bottom: 9px;
+
+  h4 {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .listTitleSecond {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 620px;
+    position: relative;
+    right: 20px;
+  }
+}
+
 li {
   background-color: $color-background;
   list-style-type: none;
@@ -11,10 +33,25 @@ li:nth-child(odd) .inputTitleItem {
   background-color: $color-background;
 }
 
-.addBtn {
+.finalResult {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 52px;
-}
 
-h2 {
-  text-align: right;
+  .addBtn {
+
+  }
+
+  .rightSideResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      text-align: right;
+      font-size: 36px;
+      margin-left: 35px;
+    }
+  }
 }
