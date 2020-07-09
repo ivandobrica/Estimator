@@ -19,6 +19,16 @@ class TableList extends Component {
     this.getData = this.getData.bind(this);
   }
 
+  componentDidMount() {
+    this.setState({
+      newItems: [
+        {
+          id: 1
+        }
+      ]
+    })
+  }
+
   deleteItem(id, total){
     var finalTotal = this.state.ivan - total
     const newItems = this.state.newItems.filter(newItem => newItem.id !== id)
