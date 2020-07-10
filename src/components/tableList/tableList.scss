@@ -39,6 +39,16 @@ li:nth-child(odd) .inputTitleItem {
   align-items: center;
   margin-top: 52px;
 
+  .arrow {
+    pointer-events: none;
+    display: none;
+  }
+
+  .paper {
+    pointer-events: none;
+    display: none;
+  }
+
   .rightSideResult {
     display: flex;
     justify-content: center;

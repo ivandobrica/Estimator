@@ -49,8 +49,11 @@ class TableList extends Component {
   getData(total) {
     this.setState(prevState => ({
       ivan: prevState.ivan + total
-    }))
+   }))
   }
+
+
+
 
   render() {
     return (
