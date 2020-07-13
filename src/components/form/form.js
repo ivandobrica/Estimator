@@ -24,7 +24,7 @@ class Form extends Component {
   }
 
   makePdf(){
-    console.log("pdf")
+      window.print()
   }
 
   render() {
@@ -56,7 +56,11 @@ class Form extends Component {
             </div>
           </div>
           <TableList />
-          <Button className="pdfBtn" name="Export to PDF"  description="Powered by Northwest Agency" clicked={this.makePdf}/>
+          <Button
+            className="pdfBtn" 
+            name="Export to PDF"
+            description="Powered by Northwest Agency"
+            clicked={this.makePdf}/>
           </form>
       </React.Fragment>
     )

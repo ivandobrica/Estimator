@@ -12,7 +12,7 @@ class TableList extends Component {
       currentItem: {
         id: ''
       },
-      ivan: 0
+      result: 0
     }
     this.addNewItem = this.addNewItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
@@ -30,11 +30,11 @@ class TableList extends Component {
   }
 
   deleteItem(id, total){
-    var finalTotal = this.state.ivan - total
+    var finalTotal = this.state.result - total
     const newItems = this.state.newItems.filter(newItem => newItem.id !== id)
       this.setState({
       newItems: newItems,
-      ivan: finalTotal
+      result: finalTotal
     })
   }
 
@@ -48,12 +48,9 @@ class TableList extends Component {
 
   getData(total) {
     this.setState(prevState => ({
-      ivan: prevState.ivan + total
+      result: prevState.result + total
    }))
   }
-
-
-
 
   render() {
     return (
@@ -74,7 +71,7 @@ class TableList extends Component {
               <TableListItem
               id={newItem.id}
               deleteListItem={(id, total) => this.deleteItem(id, total)}
-              racunaj={this.getData}
+              addTotal={this.getData}
               />
             </li>
           ))}
@@ -83,7 +80,7 @@ class TableList extends Component {
           <Button className="addBtn" name="Add Task" clicked={this.addNewItem} />
           <div className="rightSideResult">
             <h4>Total</h4>
-            <h2>${this.state.ivan}</h2>
+            <h2>${this.state.result}</h2>
           </div>
         </div>
       </React.Fragment>
