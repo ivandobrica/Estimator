@@ -1,9 +1,9 @@
 {
   "name": "react_structure",
+  "homepage": "http://ivandobrica.github.io/Estimator",
   "version": "1.0.0",
   "description": "Boilerplate for React app",
   "main": "index.js",
-  "homepage": "http://{ivandobrica}.github.io/{Estimator}",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "predeploy": "npm run build",
